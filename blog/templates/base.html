@@ -25,23 +25,23 @@ https://templatemo.com/tm-553-xtra-blog
             </button>
             <div class="tm-site-header">
                 <div class="mb-3 mx-auto tm-site-logo"><img src="{% static 'img/rs.jpg' %}" alt="Imgage" class="img-fluid"></div>           
-                <h1/> class="text-center">IT-run</h1>
+                <h1 class="text-center">IT-run</h1>
             </div>
             <nav class="tm-nav" id="tm-nav">            
                 <ul>
-                    <li class="tm-nav-item {{active}} "><a href="index.html" class="tm-nav-link">
+                    <li class="tm-nav-item {{home}} "><a href="{% url 'blog:home' %}" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
-                    <li class="tm-nav-item {{active}} "><a href="post.html" class="tm-nav-link">
+                    <li class="tm-nav-item {{post}} "><a href="{% url 'blog:post' %}" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Single Post
                     </a></li>
-                    <li class="tm-nav-item {{active}} "><a href="about.html" class="tm-nav-link">
+                    <li class="tm-nav-item {{about}} "><a href="{% url 'blog:about' %}" class="tm-nav-link">
                         <i class="fas fa-users"></i>
                         About Xtra
                     </a></li>
-                    <li class="tm-nav-item {{active}} "><a href="{% url 'blog:les' %}" class="tm-nav-link">
+                    <li class="tm-nav-item {{contact}} "><a href="{% url 'blog:les' %}" class="tm-nav-link">
                         <i class="far fa-comments"></i>
                         Contact Us
                     </a></li>
