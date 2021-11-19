@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Post
+from .models import Post,Category
 
 # Create your views here.
 def hello_world(request):
@@ -20,5 +20,7 @@ def zdraste(request):
 
 def les(request):
     return render(request,'contact.html', { "contact":"active" })
-def les1(request):
-    return render(request,'post.html', { "post":"active" })            
+def les1(request,pk):
+    post = Post.objects.get(pk=pk)
+    categories = Category.objects.all()
+    return render(request,'post.html', { "post":post,"categories":categories })            
